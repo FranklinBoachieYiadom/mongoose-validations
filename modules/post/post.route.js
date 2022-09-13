@@ -2,7 +2,7 @@ const router = require ("express").Router;
 
 const{
     createPost,deletePost,getPosts,getPost,updatePost
-} = require ("../controllers/post.controller");
+} = require ("./post.controller");
 
 const postRouter = router();
 postRouter.route("/").get(getPosts).post(createPost);
