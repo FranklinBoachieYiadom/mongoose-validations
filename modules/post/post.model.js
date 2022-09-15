@@ -13,6 +13,16 @@ const postSchema = new Schema ({
         type: Boolean,
         default: false,
     },
+    author:{
+        type: Schema.Types.ObjectId,
+        required: true,
+    },
+    likes:
+        [{
+            type: Schema.Types.ObjectId,
+            ref:" User",
+        },
+    ], 
 },
 {
     timestamp:true,
